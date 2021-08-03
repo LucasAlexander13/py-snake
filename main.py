@@ -1,20 +1,19 @@
-from snake import *
-from functions import *
+from snake import Snake, screen
 from time import sleep
 
-playing = True
+snake = Snake()
+screen.update()
 
-while playing:
+while True:
     try:
+        snake.move()
         screen.update()
-        sleep(0.2)
-        
-        for segment in range(len(snake) - 1, 0, -1):
-            new_x = snake[segment - 1].xcor()
-            new_y = snake[segment - 1].ycor()
-            snake[segment].goto(new_x, new_y)
-        
-        move_snake()
+
+        screen.listen()
+        screen.onkeypress(snake.move_up, 'Up')
+        screen.onkeypress(snake.move_right, 'Right')
+        screen.onkeypress(snake.move_left, 'Left')
+        screen.onkeypress(snake.move_down, 'Down')
 
     except:
         break
