@@ -15,4 +15,6 @@ for i in range(3):
     segment.goto(0 - i * 20, 0)
     snake.append(segment)
 
+snake_head  = snake[0]
+
 screen.update()
