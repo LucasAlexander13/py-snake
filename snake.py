@@ -1,7 +1,8 @@
 from turtle import Turtle, Screen
 from time import sleep
 
-VELOCITY = 0.2
+SPEED = 0.15
+LENGTH = 4
 
 screen = Screen()
 screen.screensize(600, 600)
@@ -12,13 +13,13 @@ screen.tracer(0)
 class Snake():
     def __init__(self):
         self.segments = []
-        self.speed = 0.2
+        self.speed = SPEED
         self.create_snake()
         self.snake_head = self.segments[0]
 
     def create_snake(self):
         sleep(self.speed)
-        for i in range(3):
+        for i in range(LENGTH):
             segment = Turtle('square')
             segment.penup()
             segment.color('white')
