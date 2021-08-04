@@ -1,5 +1,4 @@
 from snake import Snake, screen
-from time import sleep
 
 snake = Snake()
 screen.update()
