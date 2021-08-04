@@ -13,6 +13,7 @@ while True:
         screen.onkeypress(snake.move_right, 'Right')
         screen.onkeypress(snake.move_left, 'Left')
         screen.onkeypress(snake.move_down, 'Down')
+        screen.onkeypress(screen.bye, 'Escape')
 
     except:
         break
