@@ -1,14 +1,9 @@
-from turtle import Turtle, Screen
+from turtle import Turtle
 from time import sleep
 
-SPEED = 0.15
+SPEED = 0.35
 LENGTH = 4
 
-screen = Screen()
-screen.screensize(600, 600)
-screen.bgcolor('black')
-screen.title('PySnake')
-screen.tracer(0)
 
 class Snake():
     def __init__(self):
