@@ -21,6 +21,7 @@ class Snake():
             segment.goto(0 - i * 20, 0)
             self.segments.append(segment)
     
+    # Updates snake segments position following the snake's head
     def move(self):
         sleep(self.speed)
         for segment in range(len(self.segments) - 1, 0, -1):
@@ -29,6 +30,8 @@ class Snake():
             self.segments[segment].goto(new_x, new_y)
         self.snake_head.forward(20)
     
+
+    # Methods used to update the snake's direction when pressing a key
     def move_up(self):
         if self.snake_head.heading() != 270:
             self.snake_head.setheading(90)
