@@ -13,6 +13,7 @@ screen.update()
 while True:
     try:
         snake.move()
+        snake.check_limit()
         screen.update()
 
         screen.listen()

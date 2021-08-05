@@ -30,6 +30,20 @@ class Snake():
             self.segments[segment].goto(new_x, new_y)
         self.snake_head.forward(20)
     
+    # Sets a limit for snake movement
+    def check_limit(self):
+        x_axis = self.snake_head.xcor()
+        y_axis = self.snake_head.ycor()
+
+        if x_axis > 300:
+            self.snake_head.goto(-300, y_axis)
+        elif x_axis < -300:
+            self.snake_head.goto(300, y_axis)
+        elif y_axis > 300:
+            self.snake_head.goto(x_axis, -300)
+        elif y_axis < -300:
+            self.snake_head.goto(x_axis, 300)
+    
 
     # Methods used to update the snake's direction when pressing a key
     def move_up(self):
