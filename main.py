@@ -1,4 +1,11 @@
-from snake import Snake, screen
+from turtle import Screen
+from snake import Snake
+
+screen = Screen()
+screen.screensize(600, 600)
+screen.bgcolor('black')
+screen.title('PySnake')
+screen.tracer(0)
 
 snake = Snake()
 screen.update()
