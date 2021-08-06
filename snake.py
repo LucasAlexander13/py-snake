@@ -61,3 +61,13 @@ class Snake():
     def move_down(self):
         if self.snake_head.heading() != 90:
             self.snake_head.setheading(270)
+    
+    def increase_size(self):
+        last_xcor = self.segments[-1].xcor()
+        last_ycor = self.segments[-1].ycor()
+        segment = Turtle('square')
+        segment.penup()
+        segment.color('white')
+        segment.goto(last_xcor, last_ycor)
+        self.segments.append(segment)
+
