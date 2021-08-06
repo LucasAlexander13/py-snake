@@ -1,8 +1,8 @@
 from turtle import Turtle
 from time import sleep
 
-SPEED = 0.35
-LENGTH = 4
+SPEED = 0.25
+LENGTH = 5
 
 
 class Snake():
@@ -35,14 +35,14 @@ class Snake():
         x_axis = self.snake_head.xcor()
         y_axis = self.snake_head.ycor()
 
-        if x_axis > 300:
-            self.snake_head.goto(-300, y_axis)
-        elif x_axis < -300:
-            self.snake_head.goto(300, y_axis)
-        elif y_axis > 300:
-            self.snake_head.goto(x_axis, -300)
-        elif y_axis < -300:
-            self.snake_head.goto(x_axis, 300)
+        if x_axis > 330:
+            self.snake_head.goto(-330, y_axis)
+        elif x_axis < -340:
+            self.snake_head.goto(320, y_axis)
+        elif y_axis > 285:
+            self.snake_head.goto(x_axis, -265)
+        elif y_axis < -280:
+            self.snake_head.goto(x_axis, 275)
     
 
     # Methods used to update the snake's direction when pressing a key
