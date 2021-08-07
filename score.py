@@ -7,16 +7,19 @@ class Score():
         self.dot = Turtle()
         self.dot.hideturtle()
         self.dot.penup()
-        self.set_position(snake)
+        self.spawn_dot(snake)
         self.points = 0
 
-    def set_position(self, snake):
+    def spawn_dot(self, snake):
         random_x = randint(-32, 32) * 10
         random_y = randint(-24, 24) * 10
         self.dot.goto(random_x, random_y)
+        self.get_position(snake)
+
+    def get_position(self, snake):
         for segment in snake.segments:
             if self.dot.position == segment.position:
-                return self.set_position(snake)
+                return self.get_position(snake)
         self.dot.pendown()
         self.dot.dot(20, choice(color))
         self.dot.penup()
