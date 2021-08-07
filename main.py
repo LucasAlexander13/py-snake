@@ -1,5 +1,6 @@
 from turtle import Screen
 from snake import Snake
+from score import Score
 
 screen = Screen()
 screen.screensize(640, 480)
@@ -8,6 +9,7 @@ screen.title('PySnake')
 screen.tracer(0)
 
 snake = Snake()
+score = Score(snake)
 screen.update()
 
 while True:
