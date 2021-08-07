@@ -3,7 +3,7 @@ from snake import Snake
 from score import Score
 
 screen = Screen()
-screen.screensize(640, 480)
+screen.screensize(640, 480) 
 screen.bgcolor('black')
 screen.title('PySnake')
 screen.tracer(0)
