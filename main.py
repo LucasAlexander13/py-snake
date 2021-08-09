@@ -1,5 +1,6 @@
 from turtle import Screen
 from snake import Snake
+from score import Score
 from food import Food
 
 screen = Screen()
@@ -10,6 +11,7 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
+score = Score()
 screen.update()
 
 screen.listen()
@@ -23,11 +25,12 @@ while True:
     try:
         snake.move()
         snake.check_limit()
-        screen.update()
 
         if snake.snake_head.distance(food) < 15:
             snake.increase_size()
             food.spawn()
+
+        screen.update()
 
     except:
         break
