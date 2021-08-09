@@ -3,7 +3,7 @@ from snake import Snake
 from food import Food
 
 screen = Screen()
-screen.screensize(640, 480) 
+screen.screensize(500, 500) 
 screen.bgcolor('black')
 screen.title('PySnake')
 screen.tracer(0)
