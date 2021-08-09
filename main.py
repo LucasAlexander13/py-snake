@@ -12,18 +12,22 @@ snake = Snake()
 food = Food()
 screen.update()
 
+screen.listen()
+screen.onkeypress(snake.move_up, 'Up')
+screen.onkeypress(snake.move_right, 'Right')
+screen.onkeypress(snake.move_left, 'Left')
+screen.onkeypress(snake.move_down, 'Down')
+screen.onkeypress(screen.bye, 'Escape')
+
 while True:
     try:
         snake.move()
         snake.check_limit()
         screen.update()
 
-        screen.listen()
-        screen.onkeypress(snake.move_up, 'Up')
-        screen.onkeypress(snake.move_right, 'Right')
-        screen.onkeypress(snake.move_left, 'Left')
-        screen.onkeypress(snake.move_down, 'Down')
-        screen.onkeypress(screen.bye, 'Escape')
+        if snake.snake_head.distance(food) < 15:
+            snake.increase_size()
+            food.spawn()
 
     except:
         break
