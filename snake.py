@@ -35,14 +35,14 @@ class Snake():
         x_axis = self.snake_head.xcor()
         y_axis = self.snake_head.ycor()
 
-        if x_axis > 330:
-            self.snake_head.goto(-330, y_axis)
-        elif x_axis < -340:
-            self.snake_head.goto(320, y_axis)
-        elif y_axis > 285:
-            self.snake_head.goto(x_axis, -270)
-        elif y_axis < -280:
-            self.snake_head.goto(x_axis, 280)
+        if x_axis > 250:
+            self.snake_head.goto(-250, y_axis)
+        elif x_axis < -250:
+            self.snake_head.goto(250, y_axis)
+        elif y_axis > 250:
+            self.snake_head.goto(x_axis, -250)
+        elif y_axis < -250:
+            self.snake_head.goto(x_axis, 250)
     
 
     # Methods used to update the snake's direction when pressing a key
