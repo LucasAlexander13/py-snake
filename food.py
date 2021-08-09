@@ -1,5 +1,4 @@
 from turtle import Turtle
-from main import snake
 from random import choice, randint
 
 color = ['orange', 'dark orange', 'firebrick', 'dark red', 'crimson', 'medium violet red', 'dark magenta', 'medium orchid', 'medium purple', 'indigo', 'slate blue']
@@ -18,10 +17,7 @@ class Food(Turtle):
         self.color(random_color)
     
     def spawn(self):
-        x_random = randint(-200, 200)
-        y_random = randint(-200, 200)
+        x_random = randint(-10, 10) * 20
+        y_random = randint(-10, 10) * 20
         self.goto(x_random, y_random)
 
-        for segment in snake.segments:
-            if self.distance(segment) < 15:
-                self.spawn()

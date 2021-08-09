@@ -4,7 +4,6 @@ from time import sleep
 SPEED = 0.25
 LENGTH = 5
 
-
 class Snake():
     def __init__(self):
         self.segments = []
@@ -35,14 +34,14 @@ class Snake():
         x_axis = self.snake_head.xcor()
         y_axis = self.snake_head.ycor()
 
-        if x_axis > 250:
-            self.snake_head.goto(-250, y_axis)
-        elif x_axis < -250:
-            self.snake_head.goto(250, y_axis)
-        elif y_axis > 250:
-            self.snake_head.goto(x_axis, -250)
-        elif y_axis < -250:
-            self.snake_head.goto(x_axis, 250)
+        if x_axis > 200:
+            self.snake_head.goto(-200, y_axis)
+        elif x_axis < -200:
+            self.snake_head.goto(200, y_axis)
+        elif y_axis > 200:
+            self.snake_head.goto(x_axis, -200)
+        elif y_axis < -200:
+            self.snake_head.goto(x_axis, 200)
     
 
     # Methods used to update the snake's direction when pressing a key
