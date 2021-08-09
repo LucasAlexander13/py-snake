@@ -23,11 +23,13 @@ screen.onkeypress(screen.bye, 'Escape')
 
 while True:
     try:
+        score.message()
         snake.move()
         snake.check_limit()
-
+        
         if snake.snake_head.distance(food) < 15:
             snake.increase_size()
+            score.score += 1
             food.spawn()
 
         screen.update()
