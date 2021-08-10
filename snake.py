@@ -6,7 +6,7 @@ class Snake():
         self.segments = []
         self.speed = 0.30
         self.create_snake()
-        self.snake_head = self.segments[0]
+        self.head = self.segments[0]
 
     def create_snake(self):
         sleep(self.speed)
@@ -24,39 +24,39 @@ class Snake():
             new_x = self.segments[segment - 1].xcor()
             new_y = self.segments[segment - 1].ycor()
             self.segments[segment].goto(new_x, new_y)
-        self.snake_head.forward(20)
+        self.head.forward(20)
     
     # Sets a limit for snake movement
     def check_limit(self):
-        x_axis = self.snake_head.xcor()
-        y_axis = self.snake_head.ycor()
+        x_axis = self.head.xcor()
+        y_axis = self.head.ycor()
 
         if x_axis > 205:
-            self.snake_head.goto(-200, y_axis)
+            self.head.goto(-200, y_axis)
         elif x_axis < -205:
-            self.snake_head.goto(200, y_axis)
+            self.head.goto(200, y_axis)
         elif y_axis > 205:
-            self.snake_head.goto(x_axis, -200)
+            self.head.goto(x_axis, -200)
         elif y_axis < -205:
-            self.snake_head.goto(x_axis, 200)
+            self.head.goto(x_axis, 200)
     
 
     # Methods used to update the snake's direction when pressing a key
     def move_up(self):
-        if self.snake_head.heading() != 270:
-            self.snake_head.setheading(90)
+        if self.head.heading() != 270:
+            self.head.setheading(90)
     
     def move_right(self):
-        if self.snake_head.heading() != 180:
-            self.snake_head.setheading(0)
+        if self.head.heading() != 180:
+            self.head.setheading(0)
     
     def move_left(self):
-        if self.snake_head.heading() != 0:
-            self.snake_head.setheading(180)
+        if self.head.heading() != 0:
+            self.head.setheading(180)
     
     def move_down(self):
-        if self.snake_head.heading() != 90:
-            self.snake_head.setheading(270)
+        if self.head.heading() != 90:
+            self.head.setheading(270)
     
     def increase_size(self):
         last_xcor = self.segments[-1].xcor()
