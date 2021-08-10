@@ -9,7 +9,6 @@ class Food(Turtle):
         self.penup()
         self.shapesize(0.5, 0.5)
         self.speed('fastest')
-        self.pick_color()
         self.spawn()
 
     def pick_color(self):
@@ -19,5 +18,7 @@ class Food(Turtle):
     def spawn(self):
         x_random = randint(-10, 10) * 20
         y_random = randint(-10, 10) * 20
+        self.pick_color()
         self.goto(x_random, y_random)
+
 
