@@ -23,6 +23,7 @@ while True:
         
         if snake.snake_head.distance(food) < 15:
             snake.increase_size()
+            snake.increase_speed(score.score)
             score.score += 1
             food.spawn()
 

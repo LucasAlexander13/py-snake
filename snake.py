@@ -1,19 +1,16 @@
 from turtle import Turtle
 from time import sleep
 
-SPEED = 0.25
-LENGTH = 5
-
 class Snake():
     def __init__(self):
         self.segments = []
-        self.speed = SPEED
+        self.speed = 0.30
         self.create_snake()
         self.snake_head = self.segments[0]
 
     def create_snake(self):
         sleep(self.speed)
-        for i in range(LENGTH):
+        for i in range(5):
             segment = Turtle('square')
             segment.penup()
             segment.color('white')
@@ -69,4 +66,22 @@ class Snake():
         segment.color('white')
         segment.goto(last_xcor, last_ycor)
         self.segments.append(segment)
+    
+    def increase_speed(self, score):
+        if score >= 40:
+            self.speed = 0.4
+        elif score >= 35:
+            self.speed = 0.6
+        elif score >= 25:
+            self.speed = 0.08
+        elif score >= 20:
+            self.speed = 0.12
+        elif score >= 15:
+            self.speed = 0.15
+        elif score >= 12:
+            self.speed = 0.18
+        elif score >= 10:
+            self.speed = 0.2
+        else:
+            self.speed -= 0.01
 
