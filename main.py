@@ -1,13 +1,7 @@
-from turtle import Screen
+from screen import screen
 from snake import Snake
 from score import Score
 from food import Food
-
-screen = Screen()
-screen.screensize(500, 500) 
-screen.bgcolor('black')
-screen.title('PySnake')
-screen.tracer(0)
 
 snake = Snake()
 food = Food()
