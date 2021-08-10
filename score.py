@@ -12,7 +12,15 @@ class Score(Turtle):
     def message(self):
         self.clear()
         self.write(
-            arg = f'Score: {self.score}', 
+            arg = f'SCORE: {self.score}', 
+            align ='center', 
+            font = ('Comic Sans', 14, 'normal')
+            )
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write(
+            arg = 'GAME OVER', 
             align ='center', 
             font = ('Comic Sans', 14, 'normal')
             )
