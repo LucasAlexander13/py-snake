@@ -5,7 +5,7 @@ from food import Food
 from time import sleep
 
 snake = Snake()
-food = Food()
+food = Food(snake.segments)
 score = Score()
 screen.update()
 playing = True
@@ -27,7 +27,7 @@ while playing:
             snake.increase_size()
             snake.increase_speed(score.score)
             score.score += 1
-            food.spawn()
+            food.spawn(snake.segments)
 
         screen.update()
 
@@ -41,4 +41,4 @@ while playing:
                     sleep(2)
 
     except:
-        break
+        raise Exception
