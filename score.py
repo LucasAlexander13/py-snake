@@ -1,4 +1,5 @@
 from turtle import Turtle
+from time import sleep
 
 class Score(Turtle):
     def __init__(self):
@@ -24,3 +25,4 @@ class Score(Turtle):
             align ='center', 
             font = ('Comic Sans', 14, 'normal')
             )
+        sleep(2.5)
