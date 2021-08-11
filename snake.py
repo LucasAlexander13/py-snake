@@ -69,9 +69,9 @@ class Snake():
     
     def increase_speed(self, score):
         if score >= 40:
-            self.speed = 0.4
+            self.speed = 0.04
         elif score >= 35:
-            self.speed = 0.6
+            self.speed = 0.06
         elif score >= 25:
             self.speed = 0.08
         elif score >= 20:
