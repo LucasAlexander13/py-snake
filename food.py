@@ -1,7 +1,20 @@
 from turtle import Turtle
 from random import choice, randint
 
-color = ['orange', 'dark orange', 'firebrick', 'dark red', 'crimson', 'medium violet red', 'dark magenta', 'medium orchid', 'medium purple', 'indigo', 'slate blue']
+color = [
+    'orange', 
+    'dark orange', 
+    'firebrick', 
+    'dark red', 
+    'crimson', 
+    'medium violet red', 
+    'dark magenta', 
+    'medium orchid', 
+    'medium purple', 
+    'indigo', 
+    'slate blue',
+    ]
+
 class Food(Turtle):
     def __init__(self, segments):
         super().__init__()
