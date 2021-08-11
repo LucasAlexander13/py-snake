@@ -4,17 +4,19 @@ from score import Score
 from food import Food
 
 while True:
-
+    # Defines screen size, color and edge line
     set_screen(screen)
     draw_edge()
     score = Score()
 
+    # put snake and food on screen
     snake = Snake()
     food = Food(snake.segments)
 
     screen.update()
     playing = True
 
+    # listen to keypress of the player
     screen.listen()
     screen.onkeypress(snake.move_up, 'Up')
     screen.onkeypress(snake.move_right, 'Right')
@@ -28,6 +30,7 @@ while True:
             snake.move()
             snake.check_limit()
             
+            # check if head is eating food and increase snake size and score
             if snake.head.distance(food) < 15:
                 snake.increase_size()
                 snake.increase_speed(score.score)
