@@ -1,19 +1,23 @@
 from turtle import Turtle
 from time import sleep
 
+with open('score.txt', 'r') as file:
+    high_score = file.read()
+    file.close()
 class Score(Turtle):
     def __init__(self):
         super().__init__()
         self.hideturtle()
         self.color('white')
         self.penup()
-        self.goto(0, 250)
+        self.goto(0, 230)
         self.score = 0
+        self.high_score = high_score
 
-    def message(self):
+    def show_score(self):
         self.clear()
         self.write(
-            arg = f'SCORE: {self.score}', 
+            arg = f'    SCORE: {self.score}\nHIGHSCORE: {self.high_score}', 
             align ='center', 
             font = ('Comic Sans', 14, 'normal')
             )
