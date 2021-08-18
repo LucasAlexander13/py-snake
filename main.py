@@ -26,7 +26,7 @@ while True:
 
     while playing:
         try:
-            score.message()
+            score.show_score()
             snake.move()
             snake.check_limit()
             
