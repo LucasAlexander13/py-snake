@@ -46,4 +46,4 @@ while True:
                     screen.clearscreen()
 
         except:
-            break
+            raise
