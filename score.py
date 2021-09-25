@@ -22,7 +22,7 @@ class Score(Turtle):
     
     def set_highscore(self):
         if self.score > self.high_score:
-            with open('score.txt', 'w') as file:
+            with open('./score.txt', 'w') as file:
                 file.write(f'{self.score}')
                 file.close()
 
