@@ -1,7 +1,7 @@
 from turtle import Turtle
 from time import sleep
 
-with open('score.txt', 'r') as file:
+with open('./score.txt', 'r') as file:
     high_score = int(file.read())
     file.close()
 
@@ -16,7 +16,7 @@ class Score(Turtle):
         self.get_highscore()
 
     def get_highscore(self):
-        with open('score.txt', 'r') as file:
+        with open('./score.txt', 'r') as file:
             self.high_score = int(file.read())
             file.close()
     
